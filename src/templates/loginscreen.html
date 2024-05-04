@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Login:</h1>
+<form action="http://paradonathegreat.pythonanywhere.com/" method = "POST">
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  <label>User ID: </label><br>
+  <input type="text" id="userid" name="userid"><br><br>
+  <label>Room Code: </label>
+  <input type="text" id="code" name="code"><br><br>
+  <a href="#" class="button1" onclick="document.getElementById('submitButton').click(); return false;">Submit</a>
+  <button id="submitButton" type="submit" style="display: none;">Submit</button>
+</form>
+
+<p>Click on the submit button to enter a game.</p>
+</body>
+</html>
