@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+   <body>
+      <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+      <label>Username: {{user}}</label><br>
+      <label>Room Code: {{code}}</label><br>
+      <label>{{turn}}'s turn</label><br>
+      <form action = "http://paradonathegreat.pythonanywhere.com/{{maxNum}}/{{maxPpl}}/{{code}}/{{user}}" method = "POST">
+      <input disabled type="radio" id="one" name="number_choice" value=1>
+      <label for="one">1</label><br>
+      <input disabled type="radio" id="two" name="number_choice" value=2>
+      <label for="two">2</label><br>
+      <input disabled type="radio" id="three" name="number_choice" value=3>
+      <label for="three">3</label><br>
+
+      <a href="#" name = button class="button1" onclick="document.getElementById('submitButton').click(); return false;">Submit</a>
+      <button disabled name = button value = "submitButton" id="submitButton" type="submit" style="display: none;">Submit</button>
+
+      <a href="#" name = button class="button2" onclick="document.getElementById('leaveButton').click(); return false;">Leave</a>
+      <button name = button value = "leaveButton" id="leaveButton" type="submit" style="display: none;">Leave</button>
+      </form>
+      <hr>
+      <label class = "number-container">{{gamenumber}}</label>
+      <label>The first person that crosses {{maxNum}} loses!</label>
+   </body>
+   <meta http-equiv="refresh" content="5">
+</html>
