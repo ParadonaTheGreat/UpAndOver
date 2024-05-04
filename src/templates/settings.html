@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Settings:</h1>
+
+<form action="http://paradonathegreat.pythonanywhere.com/{{code}}/{{user}}/settings" method = "POST">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <label>Number to play to: </label><br>
+    <input type="range" class = slider id="maxNum" name="maxNum" min="10" max="100" value="0" oninput="amount.value=maxNum.value">
+    <output name="amount" id="amount" for="maxNum">10</output><br>
+
+    <label>Number of Players:</label>
+    <input type="range" class = slider id="maxPpl" name="maxPpl" min="2" max="10" value="0" oninput="amount2.value=maxPpl.value">
+    <output name="amount2" id="amount2" for="maxPpl">2</output><br>
+
+    <a href="#" class="button1" onclick="document.getElementById('submitButton').click(); return false;">Submit</a>
+    <button id="submitButton" type="submit" style="display: none;">Submit</button>
+</form>
+
+<p>Click on the submit button to enter a game.</p>
+</body>
+</html>
